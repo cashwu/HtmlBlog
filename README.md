@@ -1,4 +1,3 @@
-cashwu.github.io
-================
+#Cash Wu Geek
 
 my coding, my life
