@@ -44,8 +44,11 @@ nav, footer {
     clear: both;
     background: #323232;
     width: 940px;
-    height: 40px;
 }
+
+    nav {
+        height: 40px;
+    }
 
     nav ul {
         margin: 0;
@@ -74,19 +77,20 @@ nav, footer {
 #section {
     background: #f2f2f2;
     line-height: 1.5em;
+    min-height: 450px;
 }
 
-    #section #content {
+    #section #gearContent {
         padding: 180px 20px;
         text-align: center;
         min-height: 450px;
     }
 
-    #content .gears {
+    #gearContent .gears {
         margin-right: 10px;
     }
 
-    #content h1 {
+    #gearContent h1 {
         font-size: 36px;
         font-weight: 700;
     }
@@ -111,4 +115,24 @@ footer {
 
     footer a:hover {
         color: #fe4902;
+    }
+
+    footer p {
+        margin: 10px 0;
+    }
+
+    footer .label{
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        display: inline-block;
+        padding: 2px 4px;
+        font-size: 11px;
+        font-weight: bold;
+        line-height: 14px;
+        color: #ffffff;
+        vertical-align: baseline;
+        white-space: nowrap;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        background-color: #999999;
     }
