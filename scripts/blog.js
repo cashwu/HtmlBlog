@@ -1,8 +1,4 @@
 
-//angular.element(document).ready(function(){
-//    angular.bootstrap(document, ["blogApp"]);
-//});
-
 var blogApp = angular.module("blogApp",["ngRoute"]);
 
 blogApp.controller("blogController", function($scope){
