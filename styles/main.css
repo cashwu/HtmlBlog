@@ -95,6 +95,15 @@ nav, footer {
         font-weight: 700;
     }
 
+    #section .comment {
+        margin: 0 20px;
+        padding: 30px 0;
+    }
+
+        #section .comment h1 {
+
+        }
+
 footer {
     color: #999;
     font-weight: 700;
