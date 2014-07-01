@@ -33,7 +33,8 @@ function initMarkdown(){
         var markdowncontent = markdown.innerHTML;
         var markdownhtml = converter.makeHtml(markdowncontent);
         document.getElementById("content").innerHTML = markdownhtml;
-    } else {
-        document.getElementById("content").innerHTML = "";
     }
+//    else {
+//        document.getElementById("content").innerHTML = "";
+//    }
 }
