@@ -1,18 +1,21 @@
 
 var blogApp = angular.module("blogApp",["ngRoute"]);
 
-blogApp.controller("blogController", function($scope){
-    initMarkdown();
+blogApp.controller("blogController", function($scope, $routeParams){
+
+    if (!isEmpty($routeParams)) {
+        var url = $routeParams.year + "/" + $routeParams.month + "/" + $routeParams.day + "/" + $routeParams.title;
+        initMarkdown(url);
+    }
+
 });
 
 function blogAppConfig($routeProvider){
     $routeProvider
-        .when("/",{
-            templateUrl: "Views/default.html",
-            controller: "blogController"
-        })
-        .when("/2014/06/30/Start",{
-            templateUrl: "Views/2014/06/30/Start.html",
+        .when('/:year/:month/:day/:title',{
+            templateUrl: function(obj){
+                return "Views/" + obj.year + "/" + obj.month + "/" + obj.day + "/" + obj.title + ".html";
+            },
             controller: "blogController"
         })
         .otherwise({
@@ -23,10 +26,14 @@ function blogAppConfig($routeProvider){
 blogApp.config(blogAppConfig);
 
 var disqus_shortname = 'cashwugeek';
-var disqus_identifier = 'http://blog.cashwu.com/#/2014/06/30/Start';
-var disqus_url = 'http://blog.cashwu.com/#/2014/06/30/Start';
+var disqus_identifier = 'http://blog.cashwu.com/#';
+var disqus_url = 'http://blog.cashwu.com/#';
 
-function initMarkdown(){
+function initMarkdown(url){
+
+    disqus_identifier += url;
+    disqus_url += url;
+
     var markdown = document.getElementById("markdown");
     if (markdown){
         var converter = new Showdown.converter();
@@ -41,4 +48,14 @@ function initMarkdown(){
 //    else {
 //        document.getElementById("content").innerHTML = "";
 //    }
+}
+
+function isEmpty(myObject) {
+    for(var key in myObject) {
+        if (myObject.hasOwnProperty(key)) {
+            return false;
+        }
+    }
+
+    return true;
 }
