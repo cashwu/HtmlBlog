@@ -3,16 +3,30 @@ var blogApp = angular.module("blogApp",["ngRoute"]);
 
 blogApp.controller("blogController", function($scope, $routeParams){
 
+    $scope.$on("$routeChangeSuccess", function(event, current, previous){
+        if (typeof($routeParams.title) == "undefined") {
+            $scope.pageTitle = "Cash Wu Geek"
+        } else {
+            $scope.pageTitle = $routeParams.title + " | Cash Wu Geek";
+        }
+    });
+
     if (!isEmpty($routeParams)) {
         var url = $routeParams.year + "/" + $routeParams.month + "/" + $routeParams.day + "/" + $routeParams.title;
-        initMarkdown(url);
+        init(url);
     }
+});
 
+blogApp.controller("defaultController", function($scope) {
 });
 
 function blogAppConfig($routeProvider){
     $routeProvider
-        .when('/:year/:month/:day/:title',{
+        .when("/", {
+            templateUrl: "Views/default.html",
+            controller: "defaultController"
+        })
+        .when("/:year/:month/:day/:title",{
             templateUrl: function(obj){
                 return "Views/" + obj.year + "/" + obj.month + "/" + obj.day + "/" + obj.title + ".html";
             },
@@ -29,25 +43,12 @@ var disqus_shortname = 'cashwugeek';
 var disqus_identifier = 'http://blog.cashwu.com/#';
 var disqus_url = 'http://blog.cashwu.com/#';
 
-function initMarkdown(url){
-
-    disqus_identifier += url;
-    disqus_url += url;
-
+function init(url){
     var markdown = document.getElementById("markdown");
     if (markdown){
-        var converter = new Showdown.converter();
-        var markdowncontent = markdown.innerHTML;
-        var markdownhtml = converter.makeHtml(markdowncontent);
-        document.getElementById("content").innerHTML = markdownhtml;
-
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        initMarkdown(markdown);
+        intDsq(url);
     }
-//    else {
-//        document.getElementById("content").innerHTML = "";
-//    }
 }
 
 function isEmpty(myObject) {
@@ -56,6 +57,22 @@ function isEmpty(myObject) {
             return false;
         }
     }
-
     return true;
+}
+
+function initMarkdown(markdown){
+    var converter = new Showdown.converter();
+    var markdowncontent = markdown.innerHTML;
+    var markdownhtml = converter.makeHtml(markdowncontent);
+    document.getElementById("content").innerHTML = markdownhtml;
+}
+
+function intDsq(url){
+
+    disqus_identifier += url;
+    disqus_url += url;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 }
