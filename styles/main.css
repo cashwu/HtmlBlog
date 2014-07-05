@@ -3,7 +3,7 @@ body {
     background: #212121;
     width: 940px;
     margin: 0 auto;
-    font-family: sans-serif, serif;
+    font-family: 'Wendy One', sans-serif;
 }
 
 header {
@@ -64,7 +64,6 @@ nav, footer {
         nav li a {
             font-size: 16px;
             line-height: 16px;
-            font-weight: bold;
             color: #f2f2f2;
             text-decoration: none;
             cursor: auto;
@@ -106,7 +105,6 @@ nav, footer {
 
 footer {
     color: #999;
-    font-weight: 700;
     text-align: center;
     font-size: 10px;
     padding: 20px 0;
@@ -137,7 +135,6 @@ footer {
         display: inline-block;
         padding: 2px 4px;
         font-size: 11px;
-        font-weight: bold;
         line-height: 14px;
         color: #ffffff;
         vertical-align: baseline;
