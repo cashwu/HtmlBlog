@@ -8,21 +8,18 @@ blogApp.controller("blogController", function($scope, $routeParams){
         var url;
         if (!isEmpty($routeParams)) {
             url = "http://blog.cashwu.com/#/" + $routeParams.year + "/" + $routeParams.month + "/" + $routeParams.day + "/" + $routeParams.title;
-            init(url);
+            init();
         }
 
         if (typeof($routeParams.title) == "undefined") {
             $scope.pageTitle = "Cash Wu Geek";
             $scope.url = "http://blog.cashwu.com";
         } else {
-            $scope.pageTitle = $routeParams.title + " | Cash Wu Geek";
+//            $scope.pageTitle = $routeParams.title + " | Cash Wu Geek";
             $scope.url = url;
         }
     });
 
-});
-
-blogApp.controller("defaultController", function($scope) {
 });
 
 function blogAppConfig($routeProvider){
@@ -44,15 +41,15 @@ function blogAppConfig($routeProvider){
 
 blogApp.config(blogAppConfig);
 
-var disqus_shortname = 'cashwugeek';
-var disqus_identifier = 'http://blog.cashwu.com';
-var disqus_url = 'http://blog.cashwu.com';
+//var disqus_shortname = 'cashwugeek';
+//var disqus_identifier = 'http://blog.cashwu.com';
+//var disqus_url = 'http://blog.cashwu.com';
 
-function init(url){
+function init(){
     var markdown = document.getElementById("markdown");
     if (markdown){
         initMarkdown(markdown);
-        intDsq(url);
+//        intDsq(url);
     }
 }
 
@@ -72,12 +69,12 @@ function initMarkdown(markdown){
     document.getElementById("content").innerHTML = markdownhtml;
 }
 
-function intDsq(url){
+//function intDsq(url){
 
-    disqus_identifier = url;
-    disqus_url = url;
+//    disqus_identifier = url;
+//    disqus_url = url;
 
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-}
+//    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+//    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+//    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+//}
