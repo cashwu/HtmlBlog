@@ -32,6 +32,10 @@ function blogAppConfig($routeProvider){
             templateUrl: "Views/default.html",
             controller: "defaultController"
         })
+        .when("/Archives",{
+            templateUrl: "Views/Archives.html",
+            controller: "blogController"
+        })
         .when("/AboutMe",{
             templateUrl: "Views/AboutMe.html",
             controller: "blogController"
