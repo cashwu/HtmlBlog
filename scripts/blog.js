@@ -28,10 +28,10 @@ blogApp.controller("defaultController", function(){
 
 function blogAppConfig($routeProvider){
     $routeProvider
-        .when("/", {
-            templateUrl: "Views/default.html",
-            controller: "defaultController"
-        })
+//        .when("/", {
+//            templateUrl: "Views/default.html",
+//            controller: "defaultController"
+//        })
         .when("/Archives",{
             templateUrl: "Views/Archives.html",
             controller: "blogController"
@@ -47,7 +47,7 @@ function blogAppConfig($routeProvider){
             controller: "blogController"
         })
         .otherwise({
-            redirectTo: "/"
+            redirectTo: "/Archives"
         });
 }
 
