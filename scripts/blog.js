@@ -22,8 +22,8 @@ blogApp.controller("blogController", function($scope, $routeParams){
 
 });
 
-blogApp.controller("defaultController", function(){
-
+blogApp.controller("ArchivesController", function($scope){
+    $scope.archives = archives;
 });
 
 function blogAppConfig($routeProvider){
@@ -34,7 +34,7 @@ function blogAppConfig($routeProvider){
 //        })
         .when("/Archives",{
             templateUrl: "Views/Archives.html",
-            controller: "blogController"
+            controller: "ArchivesController"
         })
         .when("/AboutMe",{
             templateUrl: "Views/AboutMe.html",
