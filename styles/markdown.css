@@ -61,10 +61,10 @@
 .content h1 {
     font-weight:700;
 }
-    /*Blog Archives Link*/
-    .content h1 + div.arch  {
-        margin-left: 20px;
-    }
+
+.archives h1 {
+    margin-left: 20px;
+}
 
 .content h2 {
     font-weight: 700;
@@ -72,8 +72,8 @@
     border-bottom: 1px solid #eee;
 }
 
-    /*Blog Archives Link*/
-    .content h2~h3 {
+    /*Blog Archives*/
+    .arch h2 {
         margin-left: 50px;
     }
 
@@ -82,14 +82,18 @@
     margin-bottom: 4px;
     margin-top: 15px;
 }
+    /*Blog Archives*/
+    .arch h3 {
+        margin-left: 70px;
+    }
 
-    /*Blog Archives Link*/
-    .content h3 > a {
+    /*Blog Archives*/
+    .arch h3 > a {
         margin-left: 20px;
     }
 
-    /*Blog Archives Link*/
-    .content h3 > a:hover {
+    /*Blog Archives*/
+    .arch h3 > a:hover {
         color: #fe4902;
     }
 
@@ -198,4 +202,8 @@ pre code {
     background-color: transparent;
     border: 0;
     padding: 0;
+}
+
+#search {
+    float : right;
 }

@@ -23,5 +23,14 @@ var archives = [
         date : "06/30",
         url : "http://blog.cashwu.com/#/2014/06/30/Start",
         title: "Start"
+    },
+    {
+        year : "2012"
+    },
+    {
+        year : "",
+        date : "06/05",
+        url : "http://blog.cashwu.com/#/2012/06/05/Ubuntu-ISO",
+        title: "在 Ubuntu 下建立光碟 ISO 檔"
     }
 ];

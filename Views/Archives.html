@@ -1,11 +1,19 @@
 
-<div id="content" class="content" ng-controller="ArchivesController">
+<div id="content" class="content archives" ng-controller="ArchivesController">
+
+    <div id="search">
+        <label>
+            Search:
+            <input type="text" ng-model="search.title" placeholder=" title key word ">
+        </label>
+    </div>
 
     <h1>Blog Archives</h1>
 
-    <div ng-repeat="archive in archives" class="arch">
-        <h2 ng-show="archive.year">{{ archive.year }}</h2>
-        <h3 ng-hide="archive.year">
+
+    <div ng-repeat="archive in archives | filter:search" class="arch">
+        <h2 ng-if="archive.year != ''">{{ archive.year }}</h2>
+        <h3 ng-if="archive.year == ''">
             {{ archive.date }} <a ng-href="{{ archive.url }}" target="_blank">{{ archive.title }}</a>
         </h3>
     </div>
