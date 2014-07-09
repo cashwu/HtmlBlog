@@ -80,7 +80,7 @@
 .content h3 {
     font-weight: 700;
     margin-bottom: 4px;
-    margin-top: 2px;
+    margin-top: 15px;
 }
 
     /*Blog Archives Link*/
@@ -109,8 +109,12 @@
 .content p {
     font-size: 18px;
     line-height: 1.8em;
-    margin-top: 1.8em;
+    margin-top: 0.5em;
 }
+
+    .content p > img {
+        margin-top: 10px;
+    }
 
 .content li {
     font-size: 18px;
