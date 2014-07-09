@@ -62,7 +62,7 @@
     font-weight:700;
 }
     /*Blog Archives Link*/
-    .content h1 + h2  {
+    .content h1 + div.arch  {
         margin-left: 20px;
     }
 
