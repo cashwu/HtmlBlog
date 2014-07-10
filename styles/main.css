@@ -3,7 +3,7 @@ body {
     background: #212121;
     width: 940px;
     margin: 0 auto;
-    font-family: 'Wendy One', sans-serif;
+    font-family: 'Lora', serif;
 }
 
 header {
@@ -11,6 +11,7 @@ header {
     height: 120px;
     width: 940px;
     padding-top: 30px;
+    font-family: 'Wendy One', sans-serif;
 }
 
     header .logo{
