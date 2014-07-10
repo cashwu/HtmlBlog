@@ -36,6 +36,12 @@ var archives = [
     {
         year : "",
         date : "06/05",
+        url : "http://blog.cashwu.com/#/2012/06/13/Ubuntu-Disable-Touchpad",
+        title: "在 Ubuntu 停用觸控板"
+    },
+    {
+        year : "",
+        date : "06/05",
         url : "http://blog.cashwu.com/#/2012/06/05/Ubuntu-ISO",
         title: "在 Ubuntu 下建立光碟 ISO 檔"
     }
