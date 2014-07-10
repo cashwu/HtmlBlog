@@ -8,8 +8,14 @@ var archives = [
     },
     {
         year : "",
+        date : "07/10",
+        url : "http://blog.cashwu.com/#/2014/07/10/DB-Develop02",
+        title: "ASP.NET MVC 使用資料庫開發 (二)"
+    },
+    {
+        year : "",
         date : "07/09",
-        url : "http://blog.cashwu.com/#/2014/07/07/DB-Develop01",
+        url : "http://blog.cashwu.com/#/2014/07/09/DB-Develop01",
         title: "ASP.NET MVC 使用資料庫開發 (一)"
     },
     {
