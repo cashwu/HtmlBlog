@@ -55,9 +55,11 @@
 最大的優點就是開發快，
 不過在速度和效能上可能是一個問題
 
-### ##Entity 檔案
+### ##EF 檔案
 
-在 `Entity` 檔案上按右鍵，用 `XML 編輯器` 打開
+在 `EF` 檔案上按右鍵，用 `XML 編輯器` 打開
+
+- 註：`EF` 為 Entity Framework 的簡寫，之後都會改用 EF 來表示
 
 ![](images/2014/07/09/DB-Develop01/10.png)
 
@@ -75,17 +77,17 @@
 
 ![](images/2014/07/09/DB-Develop01/13.png)
 
-### ##Entity的連線字串
+### ##EF的連線字串
 
-`Entity` 的連線字串和原本 `ADO.NET` 的不太一樣，
+`EF` 的連線字串和原本 `ADO.NET` 的不太一樣，
 在最前面看到的 `metadata`，指的是會關連到三個檔案，
-也就是在 `Entity` 裡面看到的三個部份 `SSDL`、`CSDL` 和 `MSL`
+也就是在 `EF` 裡面看到的三個部份 `SSDL`、`CSDL` 和 `MSL`
 
 ![](images/2014/07/09/DB-Develop01/14.png)
 
-我們可以透過設定把 `Entity` 編譯輸出成三個 dll
+我們可以透過設定把 `EF` 編譯輸出成三個 dll
 
-點開 `Entity` 檔案，打開屬性視窗 (可以按 `F4`)，
+點開 `EF` 檔案，打開屬性視窗 (可以按 `F4`)，
 找到 `中斷資料成品處理`，預設是 `內嵌在輸出組件中`，把它改選到 `複製到輸出目錄`，
 改完後重新 `Build` 一次
 
@@ -96,7 +98,7 @@
 
 ![](images/2014/07/09/DB-Develop01/16.png)
 
-如果用 `VisualStudio` 開啟，看到的內容就會跟在 `Entity` 裡面看到的一樣
+如果用 `VisualStudio` 開啟，看到的內容就會跟在 `EF` 裡面看到的一樣
 
 ![](images/2014/07/09/DB-Develop01/17.png)
 
@@ -104,7 +106,7 @@
 
 ![](images/2014/07/09/DB-Develop01/18.png)
 
-- 註：如果是把 `Model` 切出去變成獨立專案的話，就需要修改這裡的設定，保哥有一篇文章在講這個設定 [關於 Entity Framework 獨立放在 DAL 專案的注意事項](http://blog.miniasp.com/post/2010/06/17/Entity-Framework-DAL-metadata-resource.aspx)
+- 註：如果是把 `Model` 切出去變成獨立專案的話，就需要修改這裡的設定，保哥有一篇文章在講這個設定 [關於 EF 獨立放在 DAL 專案的注意事項](http://blog.miniasp.com/post/2010/06/17/Entity-Framework-DAL-metadata-resource.aspx)
 
 </script>
 

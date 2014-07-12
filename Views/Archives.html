@@ -4,7 +4,7 @@
     <div id="search">
         <label>
             Search:
-            <input type="text" ng-model="search.title" placeholder=" title key word ">
+            <input type="text" ng-model="search">
         </label>
     </div>
 
@@ -16,6 +16,9 @@
         <h3 ng-if="archive.year == ''">
             {{ archive.date }} <a ng-href="{{ archive.url }}" target="_blank">{{ archive.title }}</a>
         </h3>
+        <p ng-if="archive.subtitle != ''">
+            {{ archive.subtitle }}
+        </p>
     </div>
 
 </div>

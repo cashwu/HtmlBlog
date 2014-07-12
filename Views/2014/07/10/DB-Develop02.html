@@ -1,21 +1,21 @@
 <script id="markdown" type="text/plain">
 # ASP.NET MVC 使用資料庫開發 (二)
 
-### ##使用 Entity 作 CRUD
+### ##使用 EF 作 CRUD
 
 #### ## 資料列表
 
-建立一個 `ClinetList Action`，先 `new` 出在第一步驟加入的 `Entity`，用 `db` 取得 `客戶資料`，
+建立一個 `ClinetList Action`，先 `new` 出在第一步驟加入的 `EF`，用 `db` 取得 `客戶資料`，
 並把資料傳給 `View`
 
 ![](images/2014/07/10/DB-Develop02/01.png)
 
-註：如果不知道名稱的話，可以點進 `Entity`，按 `F4` (屬性)，裡面就會有
+註：如果不知道名稱的話，可以點進 `EF`，按 `F4` (屬性)，裡面就會有
 
 ![](images/2014/07/10/DB-Develop02/02.png)
 
 加入一個 `View`，樣版選擇 `List`，模型類別選擇 Controller 傳到 View 的資料類別，也就是 `客戶資料 (BlogTest.Models)`，
-資料內容類別選擇的是加入的 `Entity`，也就是 `客戶資料Entities (BlogTest.Models)`，執行後就可以看到畫面有資料了。
+資料內容類別選擇的是加入的 `EF`，也就是 `客戶資料Entities (BlogTest.Models)`，執行後就可以看到畫面有資料了。
 
 ![](images/2014/07/10/DB-Develop02/03.png)
 
