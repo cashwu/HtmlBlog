@@ -9,6 +9,13 @@ var archives = [
     {
         year : "",
         date : "07/12",
+        url : "http://blog.cashwu.com/#/2014/07/12/DB-Develop05",
+        title: "ASP.NET MVC 使用資料庫開發 (五)",
+        subtitle: "擴充資料模型 Matadata 的開發步驗"
+    },
+    {
+        year : "",
+        date : "07/12",
         url : "http://blog.cashwu.com/#/2014/07/12/DB-Develop04",
         title: "ASP.NET MVC 使用資料庫開發 (四)",
         subtitle: "當資料庫有變動時 從資料庫更新模型時 不一定會更新"
