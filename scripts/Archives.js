@@ -60,6 +60,13 @@ var archives = [
     },
     {
         year : "",
+        date : "12/31",
+        url : "http://blog.cashwu.com/#/2013/12/31/About2013",
+        title: "About 2013",
+        subtitle: ""
+    },
+    {
+        year : "",
         date : "07/15",
         url : "http://blog.cashwu.com/#/2013/07/15/Sublime-BracketHighlighter-Invalid",
         title: "Sublime BracketHighlighter 失效問題",
