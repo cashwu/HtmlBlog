@@ -1,0 +1,78 @@
+<script id="markdown" type="text/plain">
+# ASP.NET MVC 使用資料庫開發 (四)
+
+### ##當資料庫有變動時 從資料庫更新模型時 不一定會更新
+
+### ###新增資料表時：
+
+如同新增一個新的 `EF` 之後加入資料表一樣，會自動更新
+
+所以 新增資料表時 會自動新增相關定義到SSDL、CSDL 與 MSL
+
+### ###刪除資料表時：
+
+先新增一個測試的資料表叫 `Test`，並且更新 `EF`
+
+![](images/2014/07/12/DB-Develop04/01.png)
+
+在資料表上按右鍵，選擇刪除
+
+![](images/2014/07/12/DB-Develop04/02.png)
+
+Update `EF` 之後重 Build，會發現有 Error 出現
+
+![](images/2014/07/12/DB-Develop04/03.png)
+
+用 'XML' 打開 `EF` 來看，會發現 `CSDL` 的 `Test` 資料表沒有刪除
+
+![](images/2014/07/12/DB-Develop04/04.png)
+
+![](images/2014/07/12/DB-Develop04/05.png)
+
+手動把 `CSDL` 的 `Test` 資料表刪除就好了
+
+所以刪除資料表時 會自動刪除與SSDL與 MSL相關的資料表定義，而CSDL不會刪除
+
+### ###新增資料表的欄位：
+如同前一篇文章 [ASP.NET MVC 使用資料庫開發 (三)](http://blog.cashwu.com/#/2014/07/12/DB-Develop03)，
+新增 `建立時間` 的欄位後 Update `EF`，會自動新增相關定義到SSDL、CSDL 與 MSL
+
+### ###刪除資料表的欄位：
+
+把 `客戶資料` 之前新增的 `建立時間` 欄位給刪除
+
+![](images/2014/07/12/DB-Develop04/06.png)
+
+Update `EF` 之後重 Build，會發現有 Error 出現
+
+![](images/2014/07/12/DB-Develop04/07.png)
+
+用 'XML' 打開 `EF` 來看，會發現 `CSDL` 的資料欄位沒有刪除
+
+![](images/2014/07/12/DB-Develop04/08.png)
+
+![](images/2014/07/12/DB-Develop04/09.png)
+
+![](images/2014/07/12/DB-Develop04/10.png)
+
+手動把 `CSDL` 的資料欄位 `建立時間` 刪除就好了
+
+所以刪除資料表欄位時 會自動刪除與SSDL與 MSL相關的資料表 欄位定義，而CSDL不會刪除
+
+### ###修改資料表的欄位名稱：
+
+相當於先刪除一個欄位再新增一個欄位
+
+舊欄位 會自動刪除與 `SSDL` 與 `MSL` 相關的資料表欄位定義，而 `CSDL` 不會刪除
+
+新欄位 會自動新增相關定義到 `SSDL`、`CSDL` 與 `MSL`
+
+所以修改欄位名稱時 要自已手動把舊的資料欄位刪除
+
+### ###修改資料表的欄位屬性：
+
+會自動修改 `SSDL`、`CSDL` 的相關定義，而在這種狀況下 `MSL` 不需更新
+
+</script>
+
+<div id="content" class="content"></div>

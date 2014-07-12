@@ -9,6 +9,12 @@ var archives = [
     {
         year : "",
         date : "07/12",
+        url : "http://blog.cashwu.com/#/2014/07/12/DB-Develop04",
+        title: "ASP.NET MVC 使用資料庫開發 (四)"
+    },
+    {
+        year : "",
+        date : "07/12",
         url : "http://blog.cashwu.com/#/2014/07/12/DB-Develop03",
         title: "ASP.NET MVC 使用資料庫開發 (三)"
     },
