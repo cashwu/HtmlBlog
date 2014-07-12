@@ -34,6 +34,11 @@ header {
         font-weight: 700;
     }
 
+    header #title > a {
+        color: #fff;
+        text-decoration: none;
+    }
+
     header #tagline {
         float: left;
         color: #fff;
