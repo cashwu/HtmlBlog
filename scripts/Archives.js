@@ -9,9 +9,16 @@ var archives = [
     {
         year : "",
         date : "07/13",
+        url : "http://blog.cashwu.com/#/2014/07/13/DB-Develop07",
+        title: "ASP.NET MVC 使用資料庫開發 (七)",
+        subtitle: "使用資料庫圖表作開發"
+    },
+    {
+        year : "",
+        date : "07/13",
         url : "http://blog.cashwu.com/#/2014/07/13/DB-Develop06",
         title: "ASP.NET MVC 使用資料庫開發 (六)",
-        subtitle: "有限度的調整 T-SQL 語法，使用 Include 作查詢計畫 "
+        subtitle: "有限度的調整 T-SQL 語法，使用 Include 作查詢計畫"
     },
     {
         year : "",
