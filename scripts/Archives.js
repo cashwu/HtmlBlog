@@ -94,6 +94,13 @@ var archives = [
         subtitle: ""
     },
     {
+        year : "",
+        date : "05/10",
+        url : "http://blog.cashwu.com/#/2013/05/10/CSharp-OOP-Delegate",
+        title: "C# OOP 之 Delegate",
+        subtitle: ""
+    },
+    {
         year : "2012"
     },
     {

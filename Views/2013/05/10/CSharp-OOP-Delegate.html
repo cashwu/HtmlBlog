@@ -1,0 +1,50 @@
+<script id="markdown" type="text/plain">
+# C# OOP 之 Delegate
+
+程式設定：有一個 Order 的 類別，可以透過它 取得 Price，而目前的 Price 都打 9 折
+
+![](images/2013/05/10/CSharp-OOP-Delegate/01.png)
+
+不過如果今天要改打折的折數就很麻煩，
+要改到 method 裡面的內容，
+最理想的程式的修改(擴充)方式就是不要修改到原本的程式
+
+這個時候通常就會用一個參數來傳遞折扣數進 method 裡面，
+所以第 15行的程式碼就可能會修改成
+
+    public int GetPrice(int total,int discount)
+
+不過，這樣子的改法還是有缺點，
+如果折扣的方式要變的更加複雜的話，那也只能修改 method 裡面的程式碼
+
+我們可以用另一種方式，
+把計算折扣的 method 當成參數傳遞進去，這樣子原本的程式碼就不用修改，
+以後只要折扣要變動，就只要修改那個 method 就好了，
+這樣子就可以作到不用修改到原本的程式，而已又可以修改(擴充)
+
+![](images/2013/05/10/CSharp-OOP-Delegate/02.png)
+
+我們利用 `delegate` 來作到這一件事情
+
+`delegate` 是一個特殊的型別
+
+用來定義 method 的簽名 (`signature`) [程式碼 15行]，
+delegate 的實例可以存放一或多個符合簽名的 method [程式碼 8行]
+
+17行 的 method，
+傳入的 `參數型別` 和 `回傳型別` 都跟 15行 的 delegate 簽名的一樣，
+在 8行 把 delegate new 出來 傳入 17行的 method，
+如果傳入的 method 跟 delegate 簽名的不一樣的話 就會出錯
+
+
+把 delegate 傳入 `GetPrice` 中，就好像把一個 method 傳入另一個 method 一樣
+
+
+如果 用 debug 看的話可以發現，程式跑到 10行 時 會執行 24行的 `GetPrice`，
+而 26行 真正執行的是 17行的 method ，這就是 delegate 的作用
+
+在 [MSDN](http://msdn.microsoft.com/zh-tw/library/900fyy8e(v=vs.120).aspx) 裡面也有解釋和範例程式可以看
+
+</script>
+
+<div id="content" class="content"></div>
