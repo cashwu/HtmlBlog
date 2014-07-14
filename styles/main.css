@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Wendy One';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/styles/WendOne.woff') format('woff');
+}
 
 body {
     background: #212121;
@@ -11,7 +17,7 @@ header {
     height: 120px;
     width: 940px;
     padding-top: 30px;
-    font-family: 'Wendy One', sans-serif;
+    /*font-family: 'Wendy One', sans-serif;*/
 }
 
     header .logo{

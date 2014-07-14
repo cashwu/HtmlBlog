@@ -14,7 +14,7 @@
         <meta property="og:image" content="https://lh4.googleusercontent.com/-rAd9JKhAa5Y/U7glMOuoy9I/AAAAAAAAQCs/TQqBaPbBzUQ/w1200-h650-no/blog_main.png"/>
 
         <link rel="Shortcut Icon" type="image/x-icon" href="images/logo.png" />
-        <link href='http://fonts.googleapis.com/css?family=Wendy+One|Lora' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="styles/reset.css" />
         <link rel="stylesheet" href="styles/main.css" />
         <link rel="stylesheet" href="styles/markdown.css" />
@@ -37,7 +37,14 @@
 
     <body >
 
-        <ng-include src="'Views/header.html'"></ng-include>
+    <header>
+        <img class="logo" src="images/logo.png">
+        <h1 id="title">
+            <a href="http://blog.cashwu.com">Cash Wu Geek</a>
+        </h1>
+        <h2 id="tagline">my coding , my life</h2>
+    </header>
+        <!--<ng-include src="'Views/header.html'"></ng-include>-->
         <ng-include src="'Views/nav.html'"></ng-include>
 
         <section id="section">
