@@ -8,6 +8,13 @@ var archives = [
     },
     {
         year : "",
+        date : "07/15",
+        url : "http://blog.cashwu.com/#/2014/07/15/Controller01",
+        title: "ASP.NET MVC Controller (一)",
+        subtitle: "基本 Controller 講解"
+    },
+    {
+        year : "",
         date : "07/14",
         url : "http://blog.cashwu.com/#/2014/07/14/Route02",
         title: "ASP.NET MVC Route (二)",
