@@ -8,6 +8,13 @@ var archives = [
     },
     {
         year : "",
+        date : "07/17",
+        url : "http://blog.cashwu.com/#/2014/07/17/Large-or-Small-Company.html",
+        title: "大公司 vs 小公司",
+        subtitle: "just murmur"
+    },
+    {
+        year : "",
         date : "07/16",
         url : "http://blog.cashwu.com/#/2014/07/16/Controller02",
         title: "ASP.NET MVC Controller (二)",
