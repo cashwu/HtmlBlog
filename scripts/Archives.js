@@ -8,6 +8,13 @@ var archives = [
     },
     {
         year : "",
+        date : "07/19",
+        url : "http://blog.cashwu.com/#/2014/07/19/COSCUP-Day1",
+        title: "COSCUP Day 01",
+        subtitle: ""
+    },
+    {
+        year : "",
         date : "07/18",
         url : "http://blog.cashwu.com/#/2014/07/18/Controller03",
         title: "ASP.NET MVC Controller (三)",
