@@ -8,6 +8,13 @@ var archives = [
     },
     {
         year : "",
+        date : "07/20",
+        url : "http://blog.cashwu.com/#/2014/07/20/COSCUP-Day2",
+        title: "COSCUP Day 02",
+        subtitle: ""
+    },
+    {
+        year : "",
         date : "07/19",
         url : "http://blog.cashwu.com/#/2014/07/19/COSCUP-Day1",
         title: "COSCUP Day 01",
