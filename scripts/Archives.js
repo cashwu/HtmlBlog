@@ -133,6 +133,13 @@ var archives = [
         subtitle: ""
     },
     {
+        year : "",
+        date : "01/04",
+        url : "http://blog.cashwu.com/#/2014/01/04/Base36",
+        title: "Base36",
+        subtitle: ""
+    },
+    {
         year : "2013"
     },
     {
@@ -154,6 +161,13 @@ var archives = [
         date : "05/26",
         url : "http://blog.cashwu.com/#/2013/05/26/ReadableCode01",
         title: "The Art of Readable Code (一)",
+        subtitle: ""
+    },
+    {
+        year : "",
+        date : "05/10",
+        url : "http://blog.cashwu.com/#/2013/05/10/Csharp-OOP-Event",
+        title: "C# OOP 之 Event",
         subtitle: ""
     },
     {
