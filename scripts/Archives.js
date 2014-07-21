@@ -11,7 +11,7 @@ var archives = [
         date : "07/21",
         url : "http://blog.cashwu.com/#/2014/07/21/View01",
         title: "ASP.NET MVC View (一)",
-        subtitle: "Razor 語法"
+        subtitle: "Razor 語法、Layout 主版頁面"
     },
     {
         year : "",
