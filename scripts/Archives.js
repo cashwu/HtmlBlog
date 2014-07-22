@@ -134,17 +134,24 @@ var archives = [
     },
     {
         year : "",
+        date : "04/12",
+        url : "http://blog.cashwu.com/#/2014/04/12/FineUploader03",
+        title: "ASP.NET MVC Fine Uploader (三)",
+        subtitle: "後端接收參數調整、傳入畫面上額外的參數"
+    },
+    {
+        year : "",
         date : "04/05",
         url : "http://blog.cashwu.com/#/2014/04/05/FineUploader02",
         title: "ASP.NET MVC Fine Uploader (二)",
-        subtitle: ""
+        subtitle: "基本使用"
     },
     {
         year : "",
         date : "03/23",
         url : "http://blog.cashwu.com/#/2014/03/23/FineUploader01",
         title: "ASP.NET MVC Fine Uploader (一)",
-        subtitle: ""
+        subtitle: "建置 js"
     },
     {
         year : "",
