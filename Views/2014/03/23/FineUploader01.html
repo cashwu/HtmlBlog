@@ -1,0 +1,91 @@
+<script id="markdown" type="text/plain">
+# ASP.NET MVC Fine Uploader (一)
+
+`Fine Uploader` 是很有名的上傳套件，記錄一下使用的過程。
+
+這是Fine Uploader的[官網](http://fineuploader.com/)
+
+
+
+目前的版本是 4.4，Fine Uploader是一套可以跨 Browser，也可以支援不同的後端程式的上傳套件
+
+註：目前最新版是 `5.0`
+
+來到 [downloads](http://fineuploader.com/downloads.html) 頁面，會發現 Fine Uploader 要付費才可以使用，
+不過 Fine Uploader 還是有 `GPL V3` 可以使用
+
+這是 Fine Uploader的 [Github](https://github.com/Widen/fine-uploader)，
+如果你把 GitHub 的代碼下載，會不知道要載入那一個 JS 檔，
+試了很多的 JS 檔，按照 DOCS 寫 Code 都會發生 `qq is not defined` 的錯誤
+
+其實內容大有文章，
+在 DOCS 裡面有一個 [Build Your Own](http://docs.fineuploader.com/branch/master/contributing.html)，
+裡面有寫到 怎麼 Build 出所需要的 js
+
+---
+
+下面來說明一下怎麼在 `Windwos` 下面操作：
+
+- 1、準備步驟為安裝 [git](http://git-scm.com/downloads) 和 [node.js](http://nodejs.org/)
+- (在這裡就不示範 網路上有很多安裝教學)
+- PS.. git 非必要安裝
+
+- 2、打開 `node.js` 的 `command prompt`
+
+- ![](images/2014/03/23/FineUploader01/01.png)
+
+- 3、輸入 `npm install -g grunt-cli` 來安裝 `grunt` 跑完就安裝好了
+
+- 4、下載 `Fine Uploader`，這裡有三個方式下載：
+    - a、如果前面有安裝 `git` 可以下指令 `git clone git://github.com/Widen/fine-uploader`
+    - b、如果有安裝 [GitHub for Windows](http://windows.github.com/) 可以按 `Clone in Desktop`
+    - c、如果都沒有的話，可以按 `Download ZIP` 來下載
+
+- ![](images/2014/03/23/FineUploader01/02.png)
+
+- 5、下載完了之後使用 node.js 的 `command prompt` 下指令 `cd c:\fine-uploader-master`
+- 進入 Fine Uploader 的資料夾 (在這裡的位置為 C:\fine-uploader-master)
+
+- ![](images/2014/03/23/FineUploader01/03.png)
+
+- 6、下指令 `npm install` 確保所有依賴的組件都有安裝
+
+- ![](images/2014/03/23/FineUploader01/04.png)
+
+- 7、跑完之後，下指令 `grunt package`，等跑出綠色的 `Done, without errors.` 字就好了
+
+- ![](images/2014/03/23/FineUploader01/05.png)
+
+- ![](images/2014/03/23/FineUploader01/06.png)
+
+- 8、在原本資料夾的下面會多產出一個 `_dist` 資料夾
+
+- ![](images/2014/03/23/FineUploader01/07.png)
+
+所有打包後的東西會在這裡，可以看到有壓縮檔和解壓縮後的資料夾
+
+主要分成 3個版本：`一般網頁用`、`azure` 和 `s3` 用
+
+裡面可以在分成 `js` 的版本 和 `jquery` 的版本
+
+如果沒有上傳到 azure 和 s3 的需求，
+原則上只會用到 `fineuploader-4.4.0` 和 `jquery.fineuploader-4.4.0` 這兩個資料夾
+
+到這一步就算完成，已經可以使用 js 來開發用
+
+之後的操作會使用 jquery，所以我們使用 jquery 的版本 `jquery.fineuploader-4.4.0`
+
+![](images/2014/03/23/FineUploader01/08.png)
+
+後面會分次說明怎麼使用 `Fine Uploader` 這個套件
+
+---
+
+參考連結：
+
+- [http://docs.fineuploader.com/branch/master/contributing.html](http://docs.fineuploader.com/branch/master/contributing.html)
+- [https://github.com/Widen/fine-uploader](https://github.com/Widen/fine-uploader)
+
+</script>
+
+<div id="content" class="content"></div>

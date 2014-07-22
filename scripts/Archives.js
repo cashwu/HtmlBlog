@@ -134,6 +134,13 @@ var archives = [
     },
     {
         year : "",
+        date : "03/23",
+        url : "http://blog.cashwu.com/#/2014/03/23/FineUploader01",
+        title: "ASP.NET MVC Fine Uploader (一)",
+        subtitle: ""
+    },
+    {
+        year : "",
         date : "01/04",
         url : "http://blog.cashwu.com/#/2014/01/04/Base36",
         title: "Base36",
