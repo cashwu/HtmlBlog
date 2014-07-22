@@ -8,6 +8,13 @@ var archives = [
     },
     {
         year : "",
+        date : "07/23",
+        url : "http://blog.cashwu.com/#/2014/07/23/MoveBlog",
+        title: "舊 Blog 搬移",
+        subtitle: "murmur"
+    },
+    {
+        year : "",
         date : "07/21",
         url : "http://blog.cashwu.com/#/2014/07/21/View01",
         title: "ASP.NET MVC View (一)",
@@ -129,7 +136,7 @@ var archives = [
         year : "",
         date : "06/30",
         url : "http://blog.cashwu.com/#/2014/06/30/Start",
-        title: "Start",
+        title: "New Blog Start",
         subtitle: ""
     },
     {
