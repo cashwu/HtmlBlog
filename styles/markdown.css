@@ -118,12 +118,17 @@
 .content p {
     font-size: 18px;
     line-height: 1.8em;
-    margin-top: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
     .content p > img {
         margin-top: 10px;
     }
+
+.content p + p {
+    margin-top: 1.5em;
+}
 
 .content li {
     font-size: 18px;
