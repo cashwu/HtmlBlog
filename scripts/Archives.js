@@ -9,28 +9,28 @@ var archives = [
     {
         year : "",
         date : "07/23",
-        url : "http://blog.cashwu.com/#!/2014/07/23/MoveBlog",
+        url : "http://blog.cashwu.com/#/2014/07/23/MoveBlog",
         title: "舊 Blog 搬移",
         subtitle: "murmur"
     },
     {
         year : "",
         date : "07/21",
-        url : "http://blog.cashwu.com/#!/2014/07/21/View01",
+        url : "http://blog.cashwu.com/#/2014/07/21/View01",
         title: "ASP.NET MVC View (一)",
         subtitle: "Razor 語法、Layout 主版頁面"
     },
     {
         year : "",
         date : "07/20",
-        url : "http://blog.cashwu.com/#!/2014/07/20/COSCUP-Day2",
+        url : "http://blog.cashwu.com/#/2014/07/20/COSCUP-Day2",
         title: "COSCUP Day 02",
         subtitle: ""
     },
     {
         year : "",
         date : "07/19",
-        url : "http://blog.cashwu.com/#!/2014/07/19/COSCUP-Day1",
+        url : "http://blog.cashwu.com/#/2014/07/19/COSCUP-Day1",
         title: "COSCUP Day 01",
         subtitle: ""
     },
