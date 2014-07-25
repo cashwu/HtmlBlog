@@ -1,21 +1,16 @@
 
-var blogApp = angular.module("blogApp",["ngRoute"]);
+var blogApp = angular.module("blogApp",["ngRoute","ngDisqus"]);
 
 blogApp.controller("blogController", function($scope, $routeParams){
 
     $scope.$on("$routeChangeSuccess", function(event, current, previous){
 
-        var url;
+        var url = "";
         if (!isEmpty($routeParams)) {
-            url = "http://blog.cashwu.com/#/" + $routeParams.year + "/" + $routeParams.month + "/" + $routeParams.day + "/" + $routeParams.title;
+            url = "http://blog.cashwu.com/" + $routeParams.year + "/" + $routeParams.month + "/" + $routeParams.day + "/" + $routeParams.title;
         }
 
-        if (typeof($routeParams.title) == "undefined") {
-            $scope.pageTitle = "Cash Wu Geek";
-            $scope.url = "http://blog.cashwu.com";
-        } else {
-            $scope.url = url;
-        }
+        $scope.url = typeof($routeParams.title) == "undefined" ? "" : url;
 
         init();
     });
@@ -26,12 +21,11 @@ blogApp.controller("ArchivesController", function($scope){
     $scope.archives = archives;
 });
 
-function blogAppConfig($routeProvider){
+function blogAppConfig($disqusProvider, $routeProvider){
+
+    $disqusProvider.setShortname('cashwugeek');
+
     $routeProvider
-//        .when("/", {
-//            templateUrl: "Views/default.html",
-//            controller: "defaultController"
-//        })
         .when("/Archives",{
             templateUrl: "Views/Archives.html",
             controller: "ArchivesController"
