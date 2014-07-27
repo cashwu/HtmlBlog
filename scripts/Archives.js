@@ -8,6 +8,13 @@ var archives = [
     },
     {
         year : "",
+        date : "07/27",
+        url : "http://blog.cashwu.com/#/2014/07/27/BRT-Running",
+        title: "2014 臺灣大道 BRT 路跑",
+        subtitle: "running"
+    },
+    {
+        year : "",
         date : "07/23",
         url : "http://blog.cashwu.com/#/2014/07/23/MoveBlog",
         title: "舊 Blog 搬移",
