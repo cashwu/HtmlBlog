@@ -8,6 +8,13 @@ var archives = [
     },
     {
         year : "",
+        date : "08/23",
+        url : "http://blog.cashwu.com/#/2014/08/23/TDD-Day01",
+        title: "TDD Class Day01",
+        subtitle: "TDD"
+    },
+    {
+        year : "",
         date : "07/27",
         url : "http://blog.cashwu.com/#/2014/07/27/BRT-Running",
         title: "2014 臺灣大道 BRT 路跑",
