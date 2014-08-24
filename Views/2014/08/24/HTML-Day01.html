@@ -1,0 +1,172 @@
+<script id="markdown" type="text/plain">
+# 網頁實戰入門 (HTML x CSS) Class Day01
+
+## HTML 跟 HTML (4.01) 的差別
+
+- 全新的宣告標準
+- 新的元素與屬性
+- 完整支援 css3
+- ...
+
+## 全新的宣告標準
+
+    <!DOCTYPE html>
+    <html>
+        <head></head>
+        <body></body>
+    </htm>
+
+## HTML 與 CSS 各其職
+
+- HTML 負責 Structure
+  - 。結構化
+  - 。標記語言
+  - 。不負責任何樣式
+
+- CSS 負責 Style
+  - 。定義網頁樣式
+  - 。排版網頁
+  - 。只能根據HTML定義的標籤 / 元素作設定
+
+## 切版注意事項 (畫 WireFrame 注意事項)
+
+- 1、先將假版轉回 WireFrame
+
+- 2、先把形狀畫出來，先畫出一堆方格，從外面切到裡面
+  - 註：如果是不是矩型的話，例如三角形，還是要視為矩型轉成方格
+
+- 3、一般來說 HTML 只會往下排版不會是左右的排版，所以只要是左右的格式排版的就要在它外面在多包一個外框，而這個外框是看不到的，如果一開始可以看的出來就畫，不行的話就之後在回來畫
+
+- 4、文字的話要判斷是多行文字，還是一段話分成多行
+
+- 5、圖片在 WireFrame 裡的表示方式像是叉燒包一樣
+
+- 6、CSS 裝飾性的圖片不會出現在 WireFrame 上面，畫在 WireFrame 上面的是 HTML裡面看的到的東西
+
+- 7、線條如果是用 CSS 的方式呈現就不用畫出來，如果是用圖片插入的話就要畫出來
+
+## 將 WireFrame 轉換成 HTML
+
+- 1、原則上 WireFrame 的每一個框都是一個 div
+
+- 2、由外面的框往裡面寫
+
+- 3、建議畫兩個版本，一個只有大部份的外框，一個有內容的細節，切版的話先用大部的外框切，之後在用有內容的細節寫頁面
+
+- 4、使用區塊在網頁裡面所代表的意義或是結構命名 class
+
+- 5、body 裡面第一層使用 wrap 或是 wrapper (包覆) 作 class 命名
+
+- 6、class 盡量使用小寫，如果需要使用多個名詞的話，可以使用 ` - 破折號` 或是 ` _ 底線` ，這兩個的差別在於反白選取的範圍不同
+
+- 7、善加利用縮排去表示框跟框之間的關系
+
+- 8、div 在 HTML 來說是沒有任何意義，它只是一個容器
+
+- 9、Logo 一般來說因為是公司的名稱所以很重要，一般來說會使用 `h1` tag 表示，如果是使用圖片的話，瀏覽器會 Search 不到，所以需要加上 `alt` (圖說)，給瀏覽器解讀
+
+- 10、`heading` 一般來說 只會用到 h1 h2 h3，後面就比較少用
+
+- 11、一個網頁裡面只能有一個 h1 tag
+
+- 12、`heading` 是有順序性的，不能跳的寫，而且要依 HTML 結構的順序來看，不過中間的可以被省略，但是不能跳著寫，不能是 1 > 3 > 2，可以是  1 > 3
+
+- 13、以 HTML 的結構來說，要先寫重要的，例如說 左邊是 sidebar 右邊是 main，就要先寫 main 在寫 sidebar
+
+- 14、menu (大綱)，如果使用 div 來寫的話是沒有意思的，比較常使用 ul 跟 li 來表示，而 HTML5 有一個新的 `nav` (navgiation) tag，可以用來表示 menu
+
+- 15、主要的網頁內容會使用 `main` 或是 `content` 來命名
+
+- 16、連結的頁面如果還沒有作好的話可以先用 `#` 來表示 `href`
+
+- 17、class 命名時不要打會變動的名字，不然之後還要修改
+
+- 18、命名為 info (資料)，表示在網頁裡面的意義，命為為 text (文字)，表示在元素裡面的意義
+
+- 19、連結如果前後都沒有其它東西，就可以直接用 ` a ` tag，就不用 div 包起來
+
+- 20、標記語言分成兩種
+  - 。裡面可以裝東西 (也就是裡面可以放其它的標記語言)，而且會自動換行
+  - 。單純標記，不會換行
+
+- 21、`display` 是拿來改變標記的狀態
+  - 。display: inline 不會斷行
+  - 。display: block 會斷行
+  - 。display: inline-block 不會斷行，但是可以包東西
+
+- 22、article tag (文章)，網頁的內文
+  - 。header tag 一頁裡面只能出現一次，而且通常是放在 article tag 裡面，
+  - 。如果 h1 已經被使用了，就可以使用 header
+  - 。如果只有 圖片+文字 的話 就不要用 article
+  - 。如果有 圖片+標題+文字 的話 就可以使用 article
+
+- 23、如果結構有可能需要調整的話就不要用功能來作命名，因為之後如果修改的話 HTML 跟 CSS 就要改兩個地方，這時就可以用結構來作命名
+
+- 24、如果標題跟內文唸起來像是一段話的話，就不要用 `heading`
+
+- 25、footer tag 用來表達聯絡資訊、版權宣告、地址，而且一頁裡面可以寫多個，而且如果有用 address tag 的話，footer 要寫在 address 裡面
+
+- 26、使用 CSS Sprite 時，每個圖片的容器都要有 class
+
+## css 設計架構
+
+- CSS 架構化的目的
+  - 。方便管理 CSS
+  - 。方便團隊多工運作
+  - 。方便工作交接
+
+- 常見的有
+  - 。SMACSS
+  - 。OOCSS
+  - 。BEM
+
+## SMACSS
+
+- Categorizing CSS (將 CSS 結構化)
+
+- Naming Rules (命名規則)
+
+- Decoupling CSS from HTML (把 HTML 跟 CSS 分離)
+
+## SMACSS 的架構
+- Base
+- Layout
+- Module
+- State
+- Theme
+
+## SMACSS - BASE
+- 寫通用基本的樣式
+
+- CSS Reset
+
+- 單一的 HTML 元素選擇器，但不包含屬性選擇器、子選擇器、相鄰選擇器…
+
+- Base 不能放 `!important`
+
+- 註：只在基本的 style.css 裡面放 import 去引入其它的 CSS
+
+- body 的 font-size 通常會以內文的為主， a 的 font-size 通常會以有內文的連結為主
+
+- em 是字的單位，如果在 body 裡面設 16px，就等於 16px = 1em
+
+## SMACSS - Layout
+
+- 分割頁面的區塊
+
+- Layout 裡面可以包含數個 modules
+
+- 通常使用 id 選擇器命名 Layout 區塊，因為 layout 基本上都是唯一不變的所以可以使用 id
+
+- 先把主要結構寫出來
+
+- 在容器的外層給一定的寬度，在給 `margin : 0 auto` 就會置中了
+
+</script>
+
+<div id="content" class="content"></div>
+
+<!--<section id="comments">-->
+    <!--<h2>Comments</h2>-->
+    <!--<div disqus="url"></div>-->
+<!--</section>-->
