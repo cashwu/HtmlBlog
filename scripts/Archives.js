@@ -8,6 +8,13 @@ var archives = [
     },
     {
         year : "",
+        date : "09/02",
+        url : "http://blog.cashwu.com/#/2014/09/02/HTML-Day02",
+        title: "HTML Class Day02",
+        subtitle: "HTML"
+    },
+    {
+        year : "",
         date : "09/01",
         url : "http://blog.cashwu.com/#/2014/09/01/TDD-Day02",
         title: "TDD Class Day02",
