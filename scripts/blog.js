@@ -47,10 +47,12 @@ function blogAppConfig($disqusProvider, $routeProvider){
 
 blogApp.config(blogAppConfig);
 
+var $ = function (id) { return document.getElementById(id); };
+
 function init(){
-    var markdown = document.getElementById("markdown");
+    var markdown =$("markdown");
     if (markdown){
-        initMarkdown(markdown);
+        initMarkdown(markdown.innerHTML);
     }
 }
 
@@ -63,9 +65,10 @@ function isEmpty(myObject) {
     return true;
 }
 
-function initMarkdown(markdown){
-    var converter = new Showdown.converter();
-    var markdowncontent = markdown.innerHTML;
-    var markdownhtml = converter.makeHtml(markdowncontent);
-    document.getElementById("content").innerHTML = markdownhtml;
+
+function initMarkdown(markdownhtml){
+    //var converter = new Showdown.converter();
+    //var markdownhtml = converter.makeHtml(input.innerHTML);
+    //$("content").innerHTML = markdownhtml;
+    $("content").innerHTML = marked(markdownhtml);
 }
