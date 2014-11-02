@@ -9,7 +9,7 @@ var archives = [
     {
         year : "",
         date : "11/02",
-        url : "http://blog.cashwu.com/#/2014/11/02/RWD",
+        url : "http://blog.cashwu.com/#/2014/11/01/RWD",
         title: "RWD Class",
         subtitle: "RWD、css、Boostrap"
     },
